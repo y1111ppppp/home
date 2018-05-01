@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+ }
+
+#box{
+    /*margin-left:0;*/
+    /*color:#fff0f0;*/
+    width:500px;
+}
+
+#btn{
+    /*color:#fff0f0;*/
+    width:80px;
+}
+
+#spread{
+    /*color:#fff0f0;*/
+    height:0px;
+    overflow:hidden;
+}
+
+

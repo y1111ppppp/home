@@ -1,0 +1,1555 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Apr 13 23:43:43 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 11 March 2018 11:53:54
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x131fc50
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 5 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./cwweb/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 94, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/__init__.py", line 4, in <module>
+    from xadmin.sites import AdminSite, site
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/sites.py", line 3, in <module>
+    from future.utils import iteritems
+ModuleNotFoundError: No module named 'future'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 7940, cores: 1)
+spawned uWSGI worker 2 (pid: 7950, cores: 1)
+spawned uWSGI worker 3 (pid: 7951, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 7950|app: -1|req: -1/1] 192.168.1.103 () {42 vars in 707 bytes} [Fri Apr 13 23:43:51 2018] GET /index => generated 21 bytes in 10 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+spawned uWSGI worker 4 (pid: 7952, cores: 1)
+spawned uWSGI worker 5 (pid: 7953, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 7950|app: -1|req: -1/2] 192.168.1.103 () {40 vars in 629 bytes} [Fri Apr 13 23:43:52 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 7952|app: -1|req: -1/3] 192.168.1.103 () {40 vars in 666 bytes} [Fri Apr 13 23:43:57 2018] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 7940|app: -1|req: -1/4] 192.168.1.103 () {40 vars in 624 bytes} [Fri Apr 13 23:43:57 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 7940|app: -1|req: -1/5] 192.168.1.103 () {40 vars in 678 bytes} [Fri Apr 13 23:44:04 2018] GET /index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 7952|app: -1|req: -1/6] 192.168.1.103 () {40 vars in 630 bytes} [Fri Apr 13 23:44:04 2018] GET /favicon.ico => generated 21 bytes in 25 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Apr 13 23:45:48 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 11 March 2018 11:53:54
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx/
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8888).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 7940|app: -1|req: -1/7] 192.168.1.103 () {42 vars in 709 bytes} [Fri Apr 13 23:46:03 2018] GET /index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 7951|app: -1|req: -1/8] 192.168.1.103 () {40 vars in 630 bytes} [Fri Apr 13 23:46:03 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 7952|app: -1|req: -1/9] 192.168.1.103 () {40 vars in 666 bytes} [Fri Apr 13 23:46:10 2018] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 7951|app: -1|req: -1/10] 192.168.1.103 () {40 vars in 624 bytes} [Fri Apr 13 23:46:10 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Apr 13 23:54:56 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 11 March 2018 11:53:54
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x20b1c50
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./cwweb/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 94, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/__init__.py", line 4, in <module>
+    from xadmin.sites import AdminSite, site
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/sites.py", line 3, in <module>
+    from future.utils import iteritems
+ModuleNotFoundError: No module named 'future'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 8100, cores: 1)
+spawned uWSGI worker 2 (pid: 8102, cores: 1)
+spawned uWSGI worker 3 (pid: 8103, cores: 1)
+spawned uWSGI worker 4 (pid: 8104, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 8102|app: -1|req: -1/1] 192.168.1.103 () {42 vars in 697 bytes} [Fri Apr 13 23:55:05 2018] GET / => generated 21 bytes in 17 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8102|app: -1|req: -1/2] 192.168.1.103 () {40 vars in 624 bytes} [Fri Apr 13 23:55:06 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8100|app: -1|req: -1/3] 192.168.1.103 () {42 vars in 697 bytes} [Fri Apr 13 23:55:07 2018] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8100|app: -1|req: -1/4] 192.168.1.103 () {40 vars in 624 bytes} [Fri Apr 13 23:55:07 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 14 00:01:02 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x208dd90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x208dd90 pid: 8698 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 8698, cores: 1)
+spawned uWSGI worker 2 (pid: 8700, cores: 1)
+spawned uWSGI worker 3 (pid: 8701, cores: 1)
+spawned uWSGI worker 4 (pid: 8702, cores: 1)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8698|app: 0|req: 1/1] 192.168.1.103 () {42 vars in 697 bytes} [Sat Apr 14 00:01:07 2018] GET / => generated 57964 bytes in 217 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8701|app: 0|req: 1/2] 192.168.1.103 () {40 vars in 624 bytes} [Sat Apr 14 00:01:07 2018] GET /favicon.ico => generated 57897 bytes in 65 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8701|app: 0|req: 2/3] 192.168.1.103 () {40 vars in 676 bytes} [Sat Apr 14 00:01:12 2018] GET /index => generated 57889 bytes in 36 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8702|app: 0|req: 1/4] 192.168.1.103 () {40 vars in 629 bytes} [Sat Apr 14 00:01:12 2018] GET /favicon.ico => generated 57902 bytes in 70 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8700|app: 0|req: 1/5] 192.168.1.103 () {40 vars in 678 bytes} [Sat Apr 14 00:01:18 2018] GET /index/ => generated 57901 bytes in 65 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8698|app: 0|req: 2/6] 192.168.1.103 () {40 vars in 630 bytes} [Sat Apr 14 00:01:18 2018] GET /favicon.ico => generated 57903 bytes in 33 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8702|app: 0|req: 2/7] 192.168.1.103 () {40 vars in 694 bytes} [Sat Apr 14 00:02:30 2018] GET /courses/index/ => generated 57997 bytes in 32 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8698|app: 0|req: 3/8] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:02:30 2018] GET /favicon.ico => generated 57911 bytes in 31 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8701|app: 0|req: 3/9] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:03:28 2018] GET /courses/index/ => generated 58132 bytes in 36 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8700|app: 0|req: 2/10] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:03:28 2018] GET /favicon.ico => generated 57911 bytes in 39 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8701|app: 0|req: 4/11] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:03:57 2018] GET /courses/index/ => generated 58132 bytes in 37 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8700|app: 0|req: 3/12] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:03:57 2018] GET /favicon.ico => generated 57911 bytes in 35 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8700|app: 0|req: 4/13] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:03:58 2018] GET /courses/index/ => generated 58132 bytes in 34 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8698|app: 0|req: 4/14] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:03:59 2018] GET /favicon.ico => generated 57911 bytes in 34 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8702|app: 0|req: 3/15] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:06:04 2018] GET /courses/index/ => generated 58132 bytes in 39 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8702|app: 0|req: 4/16] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:06:05 2018] GET /favicon.ico => generated 57911 bytes in 31 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8698|app: 0|req: 5/17] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:06:06 2018] GET /courses/index/ => generated 58132 bytes in 34 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '192.168.1.131:8080'. You may need to add '192.168.1.131' to ALLOWED_HOSTS.
+[pid: 8701|app: 0|req: 5/18] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:06:06 2018] GET /favicon.ico => generated 57911 bytes in 41 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 14 00:07:46 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 11 March 2018 11:53:54
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x10d4c50
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./cwweb/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 94, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/__init__.py", line 4, in <module>
+    from xadmin.sites import AdminSite, site
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/sites.py", line 3, in <module>
+    from future.utils import iteritems
+ModuleNotFoundError: No module named 'future'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 8784, cores: 1)
+spawned uWSGI worker 2 (pid: 8786, cores: 1)
+spawned uWSGI worker 3 (pid: 8787, cores: 1)
+spawned uWSGI worker 4 (pid: 8788, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 8784|app: -1|req: -1/1] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:07:49 2018] GET /courses/index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8784|app: -1|req: -1/2] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:07:49 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8784|app: -1|req: -1/3] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:07:51 2018] GET /courses/index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8786|app: -1|req: -1/4] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:07:51 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8787|app: -1|req: -1/5] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:07:52 2018] GET /courses/index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8787|app: -1|req: -1/6] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:07:52 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 14 00:08:31 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 11 March 2018 11:53:54
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1224c50
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./cwweb/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 94, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/__init__.py", line 4, in <module>
+    from xadmin.sites import AdminSite, site
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/sites.py", line 3, in <module>
+    from future.utils import iteritems
+ModuleNotFoundError: No module named 'future'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 8810, cores: 1)
+spawned uWSGI worker 2 (pid: 8812, cores: 1)
+spawned uWSGI worker 3 (pid: 8813, cores: 1)
+spawned uWSGI worker 4 (pid: 8814, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 8813|app: -1|req: -1/1] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:08:35 2018] GET /courses/index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8812|app: -1|req: -1/2] 192.168.1.103 () {40 vars in 638 bytes} [Sat Apr 14 00:08:35 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8813|app: -1|req: -1/3] 192.168.1.103 () {40 vars in 676 bytes} [Sat Apr 14 00:08:42 2018] GET /index => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8813|app: -1|req: -1/4] 192.168.1.103 () {40 vars in 629 bytes} [Sat Apr 14 00:08:42 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8814|app: -1|req: -1/5] 192.168.1.103 () {40 vars in 678 bytes} [Sat Apr 14 00:08:57 2018] GET /index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8814|app: -1|req: -1/6] 192.168.1.103 () {40 vars in 630 bytes} [Sat Apr 14 00:08:57 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 14 00:11:11 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 11 March 2018 11:53:54
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2751c50
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./cwweb/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 94, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/__init__.py", line 4, in <module>
+    from xadmin.sites import AdminSite, site
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/sites.py", line 3, in <module>
+    from future.utils import iteritems
+ModuleNotFoundError: No module named 'future'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 8851, cores: 1)
+spawned uWSGI worker 2 (pid: 8853, cores: 1)
+spawned uWSGI worker 3 (pid: 8854, cores: 1)
+spawned uWSGI worker 4 (pid: 8855, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 8854|app: -1|req: -1/1] 192.168.1.103 () {42 vars in 709 bytes} [Sat Apr 14 00:11:14 2018] GET /index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8855|app: -1|req: -1/2] 192.168.1.103 () {40 vars in 630 bytes} [Sat Apr 14 00:11:14 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8854|app: -1|req: -1/3] 192.168.1.103 () {42 vars in 709 bytes} [Sat Apr 14 00:11:17 2018] GET /index/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 8853|app: -1|req: -1/4] 192.168.1.103 () {40 vars in 630 bytes} [Sat Apr 14 00:11:17 2018] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 14 00:11:52 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1fd3d90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1fd3d90 pid: 8892 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 8892, cores: 1)
+spawned uWSGI worker 2 (pid: 8894, cores: 1)
+spawned uWSGI worker 3 (pid: 8895, cores: 1)
+spawned uWSGI worker 4 (pid: 8896, cores: 1)
+[pid: 8895|app: 0|req: 1/1] 192.168.1.103 () {42 vars in 709 bytes} [Sat Apr 14 00:11:59 2018] GET /index/ => generated 1887 bytes in 1633 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8895|app: 0|req: 2/2] 192.168.1.103 () {40 vars in 655 bytes} [Sat Apr 14 00:12:01 2018] GET /static/css/bootstrap.css => generated 2575 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8896|app: 0|req: 1/3] 192.168.1.103 () {40 vars in 652 bytes} [Sat Apr 14 00:12:01 2018] GET /static/css/master.css => generated 2575 bytes in 185 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 8896|app: 0|req: 2/4] 192.168.1.103 () {40 vars in 630 bytes} [Sat Apr 14 00:12:01 2018] GET /favicon.ico => generated 2584 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8895|app: 0|req: 3/5] 192.168.1.103 () {40 vars in 694 bytes} [Sat Apr 14 00:12:30 2018] GET /courses/index/ => generated 1947 bytes in 95 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8895|app: 0|req: 4/6] 192.168.1.103 () {40 vars in 663 bytes} [Sat Apr 14 00:12:30 2018] GET /static/css/bootstrap.css => generated 2575 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8896|app: 0|req: 3/7] 192.168.1.103 () {40 vars in 660 bytes} [Sat Apr 14 00:12:30 2018] GET /static/css/master.css => generated 2575 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8896|app: 0|req: 4/8] 192.168.1.103 () {42 vars in 725 bytes} [Sat Apr 14 00:14:42 2018] GET /courses/index/ => generated 1947 bytes in 53 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 8892|app: 0|req: 1/9] 192.168.1.101 () {44 vars in 882 bytes} [Sat Apr 14 00:16:20 2018] GET /courses/selectorder => generated 0 bytes in 169 msecs (HTTP/1.1 301) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 8895|app: 0|req: 5/10] 192.168.1.101 () {44 vars in 884 bytes} [Sat Apr 14 00:16:21 2018] GET /courses/selectorder/ => generated 5048 bytes in 195 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 8896|app: 0|req: 5/11] 192.168.1.101 () {42 vars in 773 bytes} [Sat Apr 14 00:16:23 2018] GET /favicon.ico => generated 2584 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8896|app: 0|req: 6/12] 192.168.1.101 () {44 vars in 872 bytes} [Sat Apr 14 00:17:03 2018] GET /courses/index/ => generated 1947 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 8896|app: 0|req: 7/13] 192.168.1.101 () {44 vars in 920 bytes} [Sat Apr 14 00:17:13 2018] GET /courses/submitorder/0 => generated 2676 bytes in 23 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 14 23:02:02 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x26e6d80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 23 seconds on interpreter 0x26e6d80 pid: 10553 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 10553, cores: 1)
+spawned uWSGI worker 2 (pid: 10556, cores: 1)
+spawned uWSGI worker 3 (pid: 10557, cores: 1)
+spawned uWSGI worker 4 (pid: 10558, cores: 1)
+[pid: 10557|app: 0|req: 1/1] 192.168.1.101 () {46 vars in 936 bytes} [Sat Apr 14 23:03:19 2018] GET /index => generated 0 bytes in 674 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 1/2] 192.168.1.101 () {46 vars in 938 bytes} [Sat Apr 14 23:03:20 2018] GET /index/ => generated 3179 bytes in 300 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 2/3] 192.168.1.101 () {46 vars in 959 bytes} [Sat Apr 14 23:03:34 2018] GET /login/ => generated 1536 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 2/4] 192.168.1.101 () {46 vars in 938 bytes} [Sat Apr 14 23:04:01 2018] GET /index/ => generated 3179 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 3/5] 192.168.1.101 () {46 vars in 947 bytes} [Sat Apr 14 23:06:20 2018] GET /index/ => generated 3188 bytes in 185 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 3/6] 192.168.1.101 () {46 vars in 965 bytes} [Sat Apr 14 23:06:28 2018] GET /register/ => generated 1688 bytes in 40 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10556|app: 0|req: 1/7] 192.168.1.101 () {46 vars in 959 bytes} [Sat Apr 14 23:13:43 2018] GET /login/ => generated 3151 bytes in 766 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 4/8] 192.168.1.101 () {46 vars in 959 bytes} [Sat Apr 14 23:13:50 2018] GET /login/ => generated 1512 bytes in 88 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10556|app: 0|req: 2/9] 192.168.1.101 () {54 vars in 1142 bytes} [Sat Apr 14 23:14:26 2018] POST /login/ => generated 3151 bytes in 91 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 4/10] 192.168.1.101 () {54 vars in 1142 bytes} [Sat Apr 14 23:14:49 2018] POST /login/ => generated 3445 bytes in 1544 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+[pid: 10558|app: 0|req: 1/11] 192.168.1.101 () {46 vars in 1031 bytes} [Sat Apr 14 23:15:01 2018] GET /courses/selectorder/ => generated 3445 bytes in 745 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10556|app: 0|req: 3/12] 192.168.1.101 () {46 vars in 1045 bytes} [Sat Apr 14 23:15:08 2018] GET /courses/selectorder/ => generated 3445 bytes in 201 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 5/13] 192.168.1.101 () {46 vars in 1047 bytes} [Sat Apr 14 23:15:12 2018] GET /courses/submitorder/0 => generated 2690 bytes in 107 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 5/14] 192.168.1.101 () {46 vars in 1045 bytes} [Sat Apr 14 23:15:16 2018] GET /courses/selectorder/ => generated 9468 bytes in 679 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /
+[pid: 10557|app: 0|req: 6/15] 192.168.1.101 () {46 vars in 970 bytes} [Sat Apr 14 23:15:58 2018] GET / => generated 2703 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 10553|app: 0|req: 6/16] 192.168.1.101 () {44 vars in 899 bytes} [Sat Apr 14 23:15:58 2018] GET /favicon.ico => generated 2754 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 7/17] 192.168.1.101 () {46 vars in 980 bytes} [Sat Apr 14 23:16:12 2018] GET /index => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 112 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 8/18] 192.168.1.101 () {46 vars in 982 bytes} [Sat Apr 14 23:16:13 2018] GET /index/ => generated 3445 bytes in 82 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10558|app: 0|req: 2/19] 192.168.1.101 () {46 vars in 1005 bytes} [Sat Apr 14 23:16:21 2018] GET /logout/ => generated 3445 bytes in 55 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10556|app: 0|req: 4/20] 192.168.1.101 () {48 vars in 1036 bytes} [Sat Apr 14 23:16:26 2018] GET /logout/ => generated 3445 bytes in 64 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 9/21] 192.168.1.101 () {46 vars in 1006 bytes} [Sat Apr 14 23:16:29 2018] GET /logout/ => generated 0 bytes in 178 msecs (HTTP/1.1 302) 5 headers in 214 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 7/22] 192.168.1.101 () {46 vars in 960 bytes} [Sat Apr 14 23:16:30 2018] GET /index/ => generated 3151 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 8/23] 192.168.1.101 () {46 vars in 965 bytes} [Sat Apr 14 23:16:34 2018] GET /register/ => generated 1664 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 9/24] 192.168.1.101 () {46 vars in 959 bytes} [Sat Apr 14 23:16:39 2018] GET /login/ => generated 1512 bytes in 20 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 10/25] 192.168.1.101 () {54 vars in 1142 bytes} [Sat Apr 14 23:16:51 2018] POST /login/ => generated 3445 bytes in 251 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 10/26] 192.168.1.101 () {46 vars in 1031 bytes} [Sat Apr 14 23:16:56 2018] GET /courses/selectorder/ => generated 9468 bytes in 134 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Forbidden (CSRF token missing or incorrect.): /login/
+[pid: 10557|app: 0|req: 11/27] 192.168.1.101 () {52 vars in 1155 bytes} [Sat Apr 14 23:17:15 2018] POST /login/ => generated 2497 bytes in 87 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 12/28] 192.168.1.101 () {46 vars in 982 bytes} [Sat Apr 14 23:17:31 2018] GET /index/ => generated 3445 bytes in 62 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 11/29] 192.168.1.101 () {46 vars in 1033 bytes} [Sat Apr 14 23:17:35 2018] GET /courses/submitorder/0 => generated 2690 bytes in 135 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10558|app: 0|req: 3/30] 192.168.1.101 () {54 vars in 1227 bytes} [Sat Apr 14 23:18:35 2018] POST /courses/order_edit/ => generated 3445 bytes in 159 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 13/31] 192.168.1.101 () {46 vars in 1044 bytes} [Sat Apr 14 23:18:40 2018] GET /courses/selectorder/ => generated 9468 bytes in 403 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 14/32] 192.168.1.101 () {48 vars in 1075 bytes} [Sat Apr 14 23:18:58 2018] GET /courses/selectorder/ => generated 9468 bytes in 165 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 12/33] 192.168.1.101 () {46 vars in 1046 bytes} [Sat Apr 14 23:19:22 2018] GET /courses/submitorder/0 => generated 2690 bytes in 313 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10556|app: 0|req: 5/34] 192.168.1.101 () {54 vars in 1227 bytes} [Sat Apr 14 23:19:55 2018] POST /courses/order_edit/ => generated 3445 bytes in 167 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 13/35] 192.168.1.101 () {46 vars in 1044 bytes} [Sat Apr 14 23:19:59 2018] GET /courses/selectorder/ => generated 9468 bytes in 179 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /courses/selectorder/index.html
+[pid: 10553|app: 0|req: 14/36] 192.168.1.101 () {46 vars in 1065 bytes} [Sat Apr 14 23:20:07 2018] GET /courses/selectorder/index.html => generated 3691 bytes in 52 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10556|app: 0|req: 6/37] 192.168.1.103 () {40 vars in 659 bytes} [Sat Apr 14 23:20:55 2018] GET / => generated 3151 bytes in 82 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 10557|app: 0|req: 15/38] 192.168.1.103 () {40 vars in 660 bytes} [Sat Apr 14 23:20:56 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10558|app: 0|req: 4/39] 192.168.1.103 () {42 vars in 708 bytes} [Sat Apr 14 23:21:01 2018] GET /login/ => generated 3151 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 10553|app: 0|req: 15/40] 192.168.1.103 () {40 vars in 666 bytes} [Sat Apr 14 23:21:01 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10558|app: 0|req: 5/41] 192.168.1.103 () {42 vars in 714 bytes} [Sat Apr 14 23:21:14 2018] GET /login/ => generated 3151 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 10553|app: 0|req: 16/42] 192.168.1.103 () {40 vars in 666 bytes} [Sat Apr 14 23:21:14 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 16/43] 192.168.1.101 () {46 vars in 982 bytes} [Sat Apr 14 23:21:37 2018] GET /index/ => generated 3445 bytes in 783 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 17/44] 192.168.1.103 () {42 vars in 720 bytes} [Sat Apr 14 23:21:47 2018] GET /register/ => generated 1664 bytes in 25 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10558|app: 0|req: 6/45] 192.168.1.103 () {42 vars in 760 bytes} [Sat Apr 14 23:21:57 2018] GET /login/ => generated 3151 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 10553|app: 0|req: 18/46] 192.168.1.103 () {42 vars in 755 bytes} [Sat Apr 14 23:21:57 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10557|app: 0|req: 17/47] 192.168.1.103 () {44 vars in 791 bytes} [Sat Apr 14 23:22:00 2018] GET /login/ => generated 1512 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 19/48] 192.168.1.103 () {52 vars in 980 bytes} [Sat Apr 14 23:22:12 2018] POST /login/ => generated 3445 bytes in 405 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 10553|app: 0|req: 20/49] 192.168.1.103 () {42 vars in 799 bytes} [Sat Apr 14 23:22:12 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 21/50] 192.168.1.103 () {44 vars in 875 bytes} [Sat Apr 14 23:22:17 2018] GET /courses/selectorder/ => generated 9468 bytes in 116 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 10557|app: 0|req: 18/51] 192.168.1.103 () {42 vars in 813 bytes} [Sat Apr 14 23:22:17 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 10553|app: 0|req: 22/52] 192.168.1.103 () {44 vars in 865 bytes} [Sat Apr 14 23:31:21 2018] GET /courses/submitorder/3 => generated 2717 bytes in 3597 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 10558|app: 0|req: 7/53] 192.168.1.103 () {52 vars in 1065 bytes} [Sat Apr 14 23:31:41 2018] POST /courses/order_edit/ => generated 3458 bytes in 161 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 10553|app: 0|req: 23/54] 192.168.1.103 () {42 vars in 812 bytes} [Sat Apr 14 23:31:41 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sun Apr 15 00:19:18 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1423d80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 6 seconds on interpreter 0x1423d80 pid: 12917 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 12917, cores: 1)
+spawned uWSGI worker 2 (pid: 12919, cores: 1)
+spawned uWSGI worker 3 (pid: 12920, cores: 1)
+spawned uWSGI worker 4 (pid: 12921, cores: 1)
+[pid: 12920|app: 0|req: 1/1] 192.168.1.101 () {46 vars in 982 bytes} [Sun Apr 15 00:20:11 2018] GET /index/ => generated 3458 bytes in 691 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 12921|app: 0|req: 1/2] 192.168.1.101 () {46 vars in 1033 bytes} [Sun Apr 15 00:20:19 2018] GET /courses/submitorder/0 => generated 2481 bytes in 295 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-15 00:20:46.403380) while time zone support is active.
+  RuntimeWarning)
+[pid: 12917|app: 0|req: 1/3] 192.168.1.101 () {54 vars in 1227 bytes} [Sun Apr 15 00:20:46 2018] POST /courses/order_edit/ => generated 5524 bytes in 513 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 12921|app: 0|req: 2/4] 192.168.1.101 () {46 vars in 982 bytes} [Sun Apr 15 00:21:09 2018] GET /index/ => generated 3458 bytes in 67 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 12917|app: 0|req: 2/5] 192.168.1.101 () {46 vars in 1031 bytes} [Sun Apr 15 00:21:19 2018] GET /courses/selectorder/ => generated 10467 bytes in 65 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 12917|app: 0|req: 3/6] 192.168.1.101 () {44 vars in 951 bytes} [Sun Apr 15 00:26:34 2018] GET /courses/submitorder/0 => generated 2481 bytes in 77 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 12921|app: 0|req: 3/7] 192.168.1.101 () {44 vars in 923 bytes} [Sun Apr 15 00:26:57 2018] GET /logout/ => generated 0 bytes in 314 msecs (HTTP/1.1 302) 5 headers in 214 bytes (1 switches on core 0)
+[pid: 12917|app: 0|req: 4/8] 192.168.1.101 () {44 vars in 877 bytes} [Sun Apr 15 00:26:57 2018] GET /index/ => generated 3164 bytes in 2 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 12921|app: 0|req: 4/9] 192.168.1.101 () {44 vars in 877 bytes} [Sun Apr 15 00:27:02 2018] GET /login/ => generated 1512 bytes in 27 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Apr 16 19:16:43 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1e33d80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 6 seconds on interpreter 0x1e33d80 pid: 3327 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 3327, cores: 1)
+spawned uWSGI worker 2 (pid: 3337, cores: 1)
+spawned uWSGI worker 3 (pid: 3338, cores: 1)
+spawned uWSGI worker 4 (pid: 3339, cores: 1)
+[pid: 3327|app: 0|req: 1/1] 192.168.1.101 () {46 vars in 938 bytes} [Mon Apr 16 19:17:20 2018] GET /index/ => generated 3164 bytes in 993 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3337|app: 0|req: 1/2] 192.168.1.103 () {38 vars in 600 bytes} [Mon Apr 16 19:26:11 2018] GET /favicon.ico => generated 2754 bytes in 191 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 1/3] 192.168.1.103 () {40 vars in 699 bytes} [Mon Apr 16 19:26:14 2018] GET /index/ => generated 3164 bytes in 203 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 2/4] 192.168.1.103 () {40 vars in 717 bytes} [Mon Apr 16 19:26:26 2018] GET /register/ => generated 1664 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 2/5] 192.168.1.103 () {50 vars in 992 bytes} [Mon Apr 16 19:27:26 2018] POST /register/ => generated 0 bytes in 812 msecs (HTTP/1.1 302) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 3/6] 192.168.1.103 () {44 vars in 834 bytes} [Mon Apr 16 19:27:27 2018] GET /login/ => generated 1512 bytes in 12 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3339|app: 0|req: 1/7] 192.168.1.103 () {50 vars in 983 bytes} [Mon Apr 16 19:27:53 2018] POST /login/ => generated 3458 bytes in 464 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+[pid: 3339|app: 0|req: 2/8] 192.168.1.103 () {42 vars in 872 bytes} [Mon Apr 16 19:28:03 2018] GET /courses/selectorder/ => generated 10966 bytes in 162 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3339|app: 0|req: 3/9] 192.168.1.103 () {42 vars in 820 bytes} [Mon Apr 16 19:28:03 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3338|app: 0|req: 4/10] 192.168.1.103 () {42 vars in 813 bytes} [Mon Apr 16 19:28:03 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 3/11] 192.168.1.103 () {42 vars in 888 bytes} [Mon Apr 16 19:28:20 2018] GET /courses/submitorder/3 => generated 2543 bytes in 175 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 5/12] 192.168.1.103 () {42 vars in 874 bytes} [Mon Apr 16 19:28:27 2018] GET /courses/submitorder/0 => generated 2481 bytes in 153 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-16 19:29:07.211741) while time zone support is active.
+  RuntimeWarning)
+[pid: 3337|app: 0|req: 2/13] 192.168.1.103 () {50 vars in 1068 bytes} [Mon Apr 16 19:29:07 2018] POST /courses/order_edit/ => generated 3476 bytes in 240 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 6/14] 192.168.1.103 () {42 vars in 885 bytes} [Mon Apr 16 19:29:14 2018] GET /courses/selectorder/ => generated 11464 bytes in 163 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3339|app: 0|req: 4/15] 192.168.1.103 () {42 vars in 882 bytes} [Mon Apr 16 19:29:29 2018] GET /courses/delorder/3 => generated 3470 bytes in 130 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 4/16] 192.168.1.103 () {42 vars in 886 bytes} [Mon Apr 16 19:29:35 2018] GET /courses/submitorder/0 => generated 2481 bytes in 58 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 7/17] 192.168.1.103 () {42 vars in 884 bytes} [Mon Apr 16 19:29:39 2018] GET /courses/selectorder/ => generated 10969 bytes in 63 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3337|app: 0|req: 3/18] 192.168.1.103 () {42 vars in 884 bytes} [Mon Apr 16 19:29:44 2018] GET /courses/delorder/14 => generated 3470 bytes in 148 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 5/19] 192.168.1.103 () {42 vars in 885 bytes} [Mon Apr 16 19:30:01 2018] GET /courses/selectorder/ => generated 10471 bytes in 128 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 6/20] 192.168.1.103 () {42 vars in 890 bytes} [Mon Apr 16 19:30:06 2018] GET /courses/submitorder/15 => generated 2536 bytes in 66 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3339|app: 0|req: 5/21] 192.168.1.103 () {50 vars in 1069 bytes} [Mon Apr 16 19:30:14 2018] POST /courses/order_edit/ => generated 3500 bytes in 159 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3339|app: 0|req: 6/22] 192.168.1.103 () {42 vars in 885 bytes} [Mon Apr 16 19:30:17 2018] GET /courses/selectorder/ => generated 10473 bytes in 68 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 7/23] 192.168.1.106 () {44 vars in 780 bytes} [Mon Apr 16 19:32:00 2018] GET /index/ => generated 3164 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3339|app: 0|req: 7/24] 192.168.1.106 () {42 vars in 744 bytes} [Mon Apr 16 19:32:01 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 8/25] 192.168.1.106 () {44 vars in 792 bytes} [Mon Apr 16 19:32:10 2018] GET /login/ => generated 1512 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 8/26] 192.168.1.106 () {54 vars in 1064 bytes} [Mon Apr 16 19:32:27 2018] POST /login/ => generated 3458 bytes in 1320 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3339|app: 0|req: 8/27] 192.168.1.106 () {44 vars in 877 bytes} [Mon Apr 16 19:32:28 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 9/28] 192.168.1.106 () {46 vars in 953 bytes} [Mon Apr 16 19:32:31 2018] GET /courses/selectorder/ => generated 10473 bytes in 53 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3339|app: 0|req: 9/29] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:32:31 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3337|app: 0|req: 4/30] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:32:31 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 52 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3339|app: 0|req: 10/31] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:32:32 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3338|app: 0|req: 10/32] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:32:32 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 11/33] 192.168.1.106 () {46 vars in 939 bytes} [Mon Apr 16 19:32:45 2018] GET /index/ => generated 3458 bytes in 56 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3339|app: 0|req: 11/34] 192.168.1.106 () {44 vars in 877 bytes} [Mon Apr 16 19:32:45 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 9/35] 192.168.1.106 () {46 vars in 955 bytes} [Mon Apr 16 19:32:47 2018] GET /courses/submitorder/0 => generated 2481 bytes in 88 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3339|app: 0|req: 12/36] 192.168.1.106 () {46 vars in 953 bytes} [Mon Apr 16 19:33:05 2018] GET /courses/selectorder/ => generated 10473 bytes in 56 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3338|app: 0|req: 12/37] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:33:05 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3337|app: 0|req: 5/38] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:33:05 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3327|app: 0|req: 10/39] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:33:05 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3338|app: 0|req: 13/40] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:33:05 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 14/41] 192.168.1.106 () {46 vars in 971 bytes} [Mon Apr 16 19:33:26 2018] GET /courses/submitorder/15 => generated 2537 bytes in 71 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 11/42] 192.168.1.106 () {54 vars in 1150 bytes} [Mon Apr 16 19:34:28 2018] POST /courses/order_edit/ => generated 3500 bytes in 93 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3338|app: 0|req: 15/43] 192.168.1.106 () {44 vars in 890 bytes} [Mon Apr 16 19:34:28 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3337|app: 0|req: 6/44] 192.168.1.106 () {46 vars in 966 bytes} [Mon Apr 16 19:34:35 2018] GET /courses/selectorder/ => generated 10479 bytes in 77 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3339|app: 0|req: 13/45] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:34:35 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3327|app: 0|req: 12/46] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:34:35 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+Not Found: /404.html
+[pid: 3338|app: 0|req: 16/47] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:34:36 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 13/48] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:34:36 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 14/49] 192.168.1.106 () {46 vars in 939 bytes} [Mon Apr 16 19:35:01 2018] GET /index/ => generated 3458 bytes in 59 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3338|app: 0|req: 17/50] 192.168.1.106 () {44 vars in 877 bytes} [Mon Apr 16 19:35:01 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 18/51] 192.168.1.106 () {46 vars in 955 bytes} [Mon Apr 16 19:35:03 2018] GET /courses/submitorder/0 => generated 2481 bytes in 86 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 15/52] 192.168.1.106 () {46 vars in 953 bytes} [Mon Apr 16 19:35:12 2018] GET /courses/selectorder/ => generated 10479 bytes in 66 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3338|app: 0|req: 19/53] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:35:12 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3339|app: 0|req: 14/54] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:35:12 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+Not Found: /404.html
+[pid: 3338|app: 0|req: 20/56] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:35:12 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3337|app: 0|req: 7/56] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:35:12 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3338|app: 0|req: 21/57] 192.168.1.106 () {54 vars in 1150 bytes} [Mon Apr 16 19:35:26 2018] POST /courses/selectorder/ => generated 6354 bytes in 70 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+Internal Server Error: /courses/selectorder/
+Traceback (most recent call last):
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view cwweb.app.courses.views.SelectView didn't return an HttpResponse object. It returned None instead.
+[pid: 3339|app: 0|req: 15/58] 192.168.1.106 () {54 vars in 1150 bytes} [Mon Apr 16 19:35:51 2018] POST /courses/selectorder/ => generated 53647 bytes in 218 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3327|app: 0|req: 16/59] 192.168.1.106 () {44 vars in 868 bytes} [Mon Apr 16 19:35:52 2018] GET /favicon.ico => generated 2754 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3327|app: 0|req: 17/60] 192.168.1.106 () {46 vars in 953 bytes} [Mon Apr 16 19:36:01 2018] GET /courses/selectorder/ => generated 10479 bytes in 29 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+Not Found: /404.html
+[pid: 3338|app: 0|req: 22/61] 192.168.1.106 () {44 vars in 866 bytes} [Mon Apr 16 19:36:02 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3339|app: 0|req: 16/62] 192.168.1.106 () {44 vars in 873 bytes} [Mon Apr 16 19:36:02 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Apr 17 23:17:23 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x131cd80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 7 seconds on interpreter 0x131cd80 pid: 8501 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 8501, cores: 1)
+spawned uWSGI worker 2 (pid: 8504, cores: 1)
+spawned uWSGI worker 3 (pid: 8505, cores: 1)
+spawned uWSGI worker 4 (pid: 8506, cores: 1)
+[pid: 8505|app: 0|req: 1/1] 192.168.1.106 () {46 vars in 938 bytes} [Tue Apr 17 23:18:05 2018] GET /index/ => generated 3305 bytes in 711 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 8506|app: 0|req: 1/2] 192.168.1.106 () {46 vars in 959 bytes} [Tue Apr 17 23:18:19 2018] GET /login/ => generated 1512 bytes in 253 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 8505|app: 0|req: 2/3] 192.168.1.106 () {54 vars in 1142 bytes} [Tue Apr 17 23:18:46 2018] POST /login/ => generated 3599 bytes in 1393 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+[pid: 8501|app: 0|req: 1/4] 192.168.1.106 () {46 vars in 1031 bytes} [Tue Apr 17 23:18:55 2018] GET /courses/selectorder/ => generated 15540 bytes in 560 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8501|app: 0|req: 2/5] 192.168.1.106 () {46 vars in 986 bytes} [Tue Apr 17 23:18:56 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8505|app: 0|req: 3/6] 192.168.1.106 () {46 vars in 979 bytes} [Tue Apr 17 23:18:56 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8505|app: 0|req: 4/7] 192.168.1.101 () {42 vars in 804 bytes} [Tue Apr 17 23:19:50 2018] GET /index/ => generated 3599 bytes in 327 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 8506|app: 0|req: 2/8] 192.168.1.101 () {42 vars in 799 bytes} [Tue Apr 17 23:19:51 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8501|app: 0|req: 3/9] 192.168.1.101 () {44 vars in 875 bytes} [Tue Apr 17 23:19:55 2018] GET /courses/selectorder/ => generated 15540 bytes in 103 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8501|app: 0|req: 4/10] 192.168.1.101 () {42 vars in 795 bytes} [Tue Apr 17 23:19:55 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8501|app: 0|req: 5/11] 192.168.1.101 () {42 vars in 788 bytes} [Tue Apr 17 23:19:55 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8506|app: 0|req: 3/12] 192.168.1.101 () {44 vars in 863 bytes} [Tue Apr 17 23:25:36 2018] GET /courses/selectorder/ => generated 15385 bytes in 457 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8501|app: 0|req: 6/13] 192.168.1.101 () {44 vars in 826 bytes} [Tue Apr 17 23:25:37 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8505|app: 0|req: 5/14] 192.168.1.101 () {44 vars in 819 bytes} [Tue Apr 17 23:25:37 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8501|app: 0|req: 7/15] 192.168.1.101 () {38 vars in 571 bytes} [Tue Apr 17 23:26:34 2018] GET /courses/selectorder/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 5 headers in 170 bytes (1 switches on core 0)
+[pid: 8504|app: 0|req: 1/16] 192.168.1.101 () {38 vars in 596 bytes} [Tue Apr 17 23:26:34 2018] GET /login/?next=/courses/selectorder/ => generated 1512 bytes in 1729 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 8506|app: 0|req: 4/17] 192.168.1.101 () {48 vars in 849 bytes} [Tue Apr 17 23:26:56 2018] POST /login/ => generated 3599 bytes in 947 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+[pid: 8501|app: 0|req: 8/18] 192.168.1.101 () {42 vars in 747 bytes} [Tue Apr 17 23:27:05 2018] GET /courses/selectorder/ => generated 15385 bytes in 57 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8505|app: 0|req: 6/19] 192.168.1.101 () {42 vars in 762 bytes} [Tue Apr 17 23:27:06 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8506|app: 0|req: 5/20] 192.168.1.101 () {42 vars in 734 bytes} [Tue Apr 17 23:27:06 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 8506|app: 0|req: 6/21] 192.168.1.101 () {40 vars in 704 bytes} [Tue Apr 17 23:29:02 2018] GET /courses/selectorder/ => generated 15385 bytes in 106 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8506|app: 0|req: 7/22] 192.168.1.101 () {42 vars in 734 bytes} [Tue Apr 17 23:29:02 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8505|app: 0|req: 7/23] 192.168.1.101 () {42 vars in 762 bytes} [Tue Apr 17 23:29:02 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 8501|app: 0|req: 9/24] 192.168.1.101 () {40 vars in 562 bytes} [Tue Apr 17 23:29:29 2018] GET /static/js/popper.min.js.map => generated 2745 bytes in 25 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr 18 05:30:13 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xebfd90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 11 seconds on interpreter 0xebfd90 pid: 2134 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 2134, cores: 1)
+spawned uWSGI worker 2 (pid: 2137, cores: 1)
+spawned uWSGI worker 3 (pid: 2138, cores: 1)
+spawned uWSGI worker 4 (pid: 2139, cores: 1)
+[pid: 2139|app: 0|req: 1/1] 192.168.1.101 () {42 vars in 804 bytes} [Wed Apr 18 05:30:55 2018] GET /index/ => generated 3599 bytes in 1039 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2138|app: 0|req: 1/2] 192.168.1.101 () {42 vars in 799 bytes} [Wed Apr 18 05:30:57 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 236 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2139|app: 0|req: 2/3] 192.168.1.101 () {44 vars in 875 bytes} [Wed Apr 18 05:31:00 2018] GET /courses/selectorder/ => generated 15540 bytes in 307 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2138|app: 0|req: 2/4] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 05:31:00 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2134|app: 0|req: 1/5] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 05:31:00 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 238 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 2139|app: 0|req: 3/6] 192.168.1.101 () {40 vars in 708 bytes} [Wed Apr 18 05:31:13 2018] GET /favicon.ico => generated 2754 bytes in 13 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2134|app: 0|req: 2/7] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 05:38:41 2018] GET /courses/selectorder/ => generated 15521 bytes in 133 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2138|app: 0|req: 3/8] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 05:38:41 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2139|app: 0|req: 4/9] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 05:38:41 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr 18 05:43:25 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1ea6db0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1ea6db0 pid: 2433 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 2433, cores: 1)
+spawned uWSGI worker 2 (pid: 2435, cores: 1)
+spawned uWSGI worker 3 (pid: 2436, cores: 1)
+spawned uWSGI worker 4 (pid: 2437, cores: 1)
+[pid: 2436|app: 0|req: 1/1] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 05:43:34 2018] GET /courses/selectorder/ => generated 15521 bytes in 304 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2436|app: 0|req: 2/2] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 05:43:34 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2437|app: 0|req: 1/3] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 05:43:34 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 190 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2436|app: 0|req: 3/4] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 05:47:35 2018] GET /courses/selectorder/ => generated 15565 bytes in 36 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2437|app: 0|req: 2/5] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 05:47:35 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2436|app: 0|req: 4/6] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 05:47:35 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2437|app: 0|req: 3/7] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 05:48:09 2018] GET /courses/selectorder/ => generated 15565 bytes in 126 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2437|app: 0|req: 4/8] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 05:48:09 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2433|app: 0|req: 1/9] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 05:48:09 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 196 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr 18 05:49:11 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xab3db0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xab3db0 pid: 2882 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 2882, cores: 1)
+spawned uWSGI worker 2 (pid: 2885, cores: 1)
+spawned uWSGI worker 3 (pid: 2886, cores: 1)
+spawned uWSGI worker 4 (pid: 2887, cores: 1)
+Not Found: /
+[pid: 2882|app: 0|req: 1/1] 192.168.1.101 () {42 vars in 792 bytes} [Wed Apr 18 05:49:33 2018] GET / => generated 2703 bytes in 167 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2887|app: 0|req: 1/2] 192.168.1.101 () {42 vars in 804 bytes} [Wed Apr 18 05:49:37 2018] GET /index/ => generated 3599 bytes in 274 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2886|app: 0|req: 1/3] 192.168.1.101 () {42 vars in 799 bytes} [Wed Apr 18 05:49:37 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 276 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2882|app: 0|req: 2/4] 192.168.1.101 () {44 vars in 875 bytes} [Wed Apr 18 05:49:39 2018] GET /courses/selectorder/ => generated 15565 bytes in 160 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2886|app: 0|req: 2/5] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 05:49:40 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2885|app: 0|req: 1/6] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 05:49:40 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 181 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2882|app: 0|req: 3/7] 192.168.1.101 () {42 vars in 804 bytes} [Wed Apr 18 06:14:25 2018] GET /index/ => generated 3599 bytes in 7969 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2887|app: 0|req: 2/8] 192.168.1.101 () {42 vars in 799 bytes} [Wed Apr 18 06:14:33 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 2505 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2886|app: 0|req: 3/9] 192.168.1.101 () {44 vars in 875 bytes} [Wed Apr 18 06:14:37 2018] GET /courses/selectorder/ => generated 14359 bytes in 4576 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2886|app: 0|req: 4/10] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 06:14:42 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2887|app: 0|req: 3/11] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 06:14:42 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 41 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /courses/selectorder/index.html
+[pid: 2882|app: 0|req: 4/12] 192.168.1.101 () {44 vars in 909 bytes} [Wed Apr 18 06:21:31 2018] GET /courses/selectorder/index.html => generated 3691 bytes in 468 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 2886|app: 0|req: 5/13] 192.168.1.101 () {42 vars in 775 bytes} [Wed Apr 18 06:21:32 2018] GET /favicon.ico => generated 2754 bytes in 25 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2886|app: 0|req: 6/14] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 06:21:40 2018] GET /courses/selectorder/ => generated 14502 bytes in 585 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2882|app: 0|req: 5/15] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 06:21:41 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2887|app: 0|req: 4/16] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 06:21:41 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 402 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2886|app: 0|req: 7/17] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 06:23:45 2018] GET /courses/selectorder/ => generated 14466 bytes in 293 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2886|app: 0|req: 8/18] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 06:23:48 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2885|app: 0|req: 2/19] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 06:23:45 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 5111 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2882|app: 0|req: 6/20] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 06:31:19 2018] GET /courses/selectorder/ => generated 14453 bytes in 1061 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2886|app: 0|req: 9/21] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 06:31:20 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2887|app: 0|req: 5/22] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 06:31:20 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 136 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2885|app: 0|req: 3/23] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 06:38:06 2018] GET /courses/selectorder/ => generated 15291 bytes in 2911 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2882|app: 0|req: 7/24] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 06:38:09 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2886|app: 0|req: 10/25] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 06:38:09 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2886|app: 0|req: 11/26] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 06:39:16 2018] GET /courses/selectorder/ => generated 15176 bytes in 247 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2887|app: 0|req: 6/27] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 06:39:17 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 53 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2885|app: 0|req: 4/28] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 06:39:17 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 61 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2887|app: 0|req: 7/29] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 06:40:48 2018] GET /courses/selectorder/ => generated 15291 bytes in 1477 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+Not Found: /404.html
+[pid: 2887|app: 0|req: 8/31] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 06:40:50 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2886|app: 0|req: 12/31] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 06:40:50 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2885|app: 0|req: 5/32] 192.168.1.101 () {44 vars in 863 bytes} [Wed Apr 18 06:43:25 2018] GET /courses/selectorder/ => generated 15176 bytes in 812 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2886|app: 0|req: 13/33] 192.168.1.101 () {42 vars in 795 bytes} [Wed Apr 18 06:43:26 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2887|app: 0|req: 9/34] 192.168.1.101 () {42 vars in 788 bytes} [Wed Apr 18 06:43:26 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2887|app: 0|req: 10/35] 192.168.1.106 () {46 vars in 982 bytes} [Wed Apr 18 06:43:57 2018] GET /index/ => generated 3599 bytes in 178 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 2882|app: 0|req: 8/36] 192.168.1.106 () {46 vars in 1031 bytes} [Wed Apr 18 06:44:04 2018] GET /courses/selectorder/ => generated 15176 bytes in 128 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2886|app: 0|req: 14/37] 192.168.1.106 () {46 vars in 979 bytes} [Wed Apr 18 06:44:04 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 13 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 2887|app: 0|req: 11/38] 192.168.1.106 () {46 vars in 986 bytes} [Wed Apr 18 06:44:04 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr 18 19:20:43 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xc6fd80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 15 seconds on interpreter 0xc6fd80 pid: 3403 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 3403, cores: 1)
+spawned uWSGI worker 2 (pid: 3405, cores: 1)
+spawned uWSGI worker 3 (pid: 3406, cores: 1)
+spawned uWSGI worker 4 (pid: 3407, cores: 1)
+[pid: 3407|app: 0|req: 1/1] 192.168.1.105 () {42 vars in 804 bytes} [Wed Apr 18 19:21:22 2018] GET /index/ => generated 3599 bytes in 5283 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3407|app: 0|req: 2/2] 192.168.1.105 () {42 vars in 799 bytes} [Wed Apr 18 19:21:28 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 3/3] 192.168.1.105 () {44 vars in 875 bytes} [Wed Apr 18 19:21:34 2018] GET /courses/selectorder/ => generated 15114 bytes in 268 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3407|app: 0|req: 4/4] 192.168.1.105 () {42 vars in 795 bytes} [Wed Apr 18 19:21:34 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3405|app: 0|req: 1/5] 192.168.1.105 () {42 vars in 788 bytes} [Wed Apr 18 19:21:34 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 493 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-02 00:00:00) while time zone support is active.
+  RuntimeWarning)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+[pid: 3407|app: 0|req: 5/6] 192.168.1.105 () {52 vars in 1066 bytes} [Wed Apr 18 19:21:54 2018] POST /courses/selectorder/ => generated 10110 bytes in 245 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 1/7] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:22:02 2018] GET /courses/selectorder/ => generated 15114 bytes in 535 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3407|app: 0|req: 6/8] 192.168.1.105 () {42 vars in 795 bytes} [Wed Apr 18 19:22:03 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3405|app: 0|req: 2/9] 192.168.1.105 () {42 vars in 788 bytes} [Wed Apr 18 19:22:03 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-09 00:00:00) while time zone support is active.
+  RuntimeWarning)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-16 00:00:00) while time zone support is active.
+  RuntimeWarning)
+[pid: 3406|app: 0|req: 2/10] 192.168.1.105 () {52 vars in 1066 bytes} [Wed Apr 18 19:22:15 2018] POST /courses/selectorder/ => generated 10651 bytes in 82 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 3/11] 192.168.1.105 () {44 vars in 861 bytes} [Wed Apr 18 19:22:33 2018] GET /index/ => generated 3599 bytes in 39 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3407|app: 0|req: 7/12] 192.168.1.105 () {42 vars in 799 bytes} [Wed Apr 18 19:22:33 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 7 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 8/13] 192.168.1.105 () {44 vars in 875 bytes} [Wed Apr 18 19:24:51 2018] GET /courses/selectorder/ => generated 14841 bytes in 608 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3406|app: 0|req: 4/14] 192.168.1.105 () {42 vars in 788 bytes} [Wed Apr 18 19:24:51 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /404.html
+[pid: 3403|app: 0|req: 1/15] 192.168.1.105 () {42 vars in 795 bytes} [Wed Apr 18 19:24:51 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 689 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 9/16] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:25:21 2018] GET /courses/selectorder/ => generated 15039 bytes in 181 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /404.html
+Not Found: /404.html
+[pid: 3405|app: 0|req: 3/18] 192.168.1.105 () {42 vars in 788 bytes} [Wed Apr 18 19:25:21 2018] GET /static/js/bootstrap-datetimepicker.js => generated 2745 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 2/18] 192.168.1.105 () {42 vars in 795 bytes} [Wed Apr 18 19:25:21 2018] GET /static/css/datetimepicker.css => generated 2745 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3405|app: 0|req: 4/19] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:31:00 2018] GET /courses/selectorder/ => generated 14854 bytes in 1567 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 3407|app: 0|req: 10/20] 192.168.1.105 () {40 vars in 708 bytes} [Wed Apr 18 19:31:11 2018] GET /favicon.ico => generated 2754 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 11/21] 192.168.1.105 () {40 vars in 676 bytes} [Wed Apr 18 19:34:03 2018] GET /index/ => generated 3599 bytes in 87 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 12/22] 192.168.1.105 () {42 vars in 747 bytes} [Wed Apr 18 19:34:08 2018] GET /courses/selectorder/ => generated 14854 bytes in 45 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3405|app: 0|req: 5/23] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:39:51 2018] GET /courses/selectorder/ => generated 15117 bytes in 135 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3405|app: 0|req: 6/24] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:42:16 2018] GET /courses/selectorder/ => generated 15060 bytes in 306 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 5/25] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:43:50 2018] GET /courses/selectorder/ => generated 14983 bytes in 184 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 13/26] 192.168.1.105 () {40 vars in 704 bytes} [Wed Apr 18 19:43:58 2018] GET /courses/selectorder/ => generated 14983 bytes in 63 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /courses/selectorder/index.html
+[pid: 3406|app: 0|req: 6/27] 192.168.1.105 () {44 vars in 909 bytes} [Wed Apr 18 19:46:49 2018] GET /courses/selectorder/index.html => generated 3691 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /courses/selectorder/index.html
+[pid: 3403|app: 0|req: 3/28] 192.168.1.105 () {44 vars in 909 bytes} [Wed Apr 18 19:46:57 2018] GET /courses/selectorder/index.html => generated 3691 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 14/29] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:51:41 2018] GET /courses/selectorder/ => generated 2188 bytes in 160 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 15/30] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:53:24 2018] GET /courses/selectorder/ => generated 2188 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 7/31] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 19:53:26 2018] GET /courses/selectorder/ => generated 2188 bytes in 48 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 8/32] 192.168.1.105 () {40 vars in 704 bytes} [Wed Apr 18 19:53:51 2018] GET /courses/selectorder/ => generated 4860 bytes in 69 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 16/33] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 20:01:19 2018] GET /courses/selectorder/ => generated 14910 bytes in 1278 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3405|app: 0|req: 7/34] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 20:03:55 2018] GET /courses/selectorder/ => generated 14559 bytes in 318 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 17/35] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 20:04:22 2018] GET /courses/selectorder/ => generated 14499 bytes in 365 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 9/36] 192.168.1.105 () {40 vars in 704 bytes} [Wed Apr 18 20:04:55 2018] GET /courses/selectorder/ => generated 14499 bytes in 249 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 10/37] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 20:05:37 2018] GET /courses/selectorder/ => generated 14802 bytes in 65 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 4/38] 192.168.1.105 () {40 vars in 704 bytes} [Wed Apr 18 20:07:01 2018] GET /courses/selectorder/ => generated 14802 bytes in 1180 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 18/39] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 20:07:11 2018] GET /courses/selectorder/ => generated 14802 bytes in 82 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 5/40] 192.168.1.102 () {46 vars in 982 bytes} [Wed Apr 18 20:10:22 2018] GET /index/ => generated 3599 bytes in 118 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 6/41] 192.168.1.102 () {46 vars in 1031 bytes} [Wed Apr 18 20:10:32 2018] GET /courses/selectorder/ => generated 14802 bytes in 82 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-01 00:00:00) while time zone support is active.
+  RuntimeWarning)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+[pid: 3407|app: 0|req: 19/42] 192.168.1.102 () {54 vars in 1228 bytes} [Wed Apr 18 20:11:22 2018] POST /courses/selectorder/ => generated 9975 bytes in 81 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 11/43] 192.168.1.102 () {46 vars in 1031 bytes} [Wed Apr 18 20:11:36 2018] GET /courses/selectorder/ => generated 14802 bytes in 45 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 7/44] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 20:13:31 2018] GET /courses/selectorder/ => generated 14595 bytes in 158 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 8/45] 192.168.1.105 () {44 vars in 889 bytes} [Wed Apr 18 20:13:35 2018] GET /courses/selectorder/ => generated 14595 bytes in 67 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 12/46] 192.168.1.102 () {46 vars in 980 bytes} [Wed Apr 18 20:14:23 2018] GET /courses/selectorder/ => generated 14595 bytes in 128 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /courses/selectorder/index.html
+[pid: 3406|app: 0|req: 13/47] 192.168.1.105 () {44 vars in 909 bytes} [Wed Apr 18 20:17:41 2018] GET /courses/selectorder/index.html => generated 3691 bytes in 276 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 9/48] 192.168.1.105 () {42 vars in 832 bytes} [Wed Apr 18 20:18:40 2018] GET /courses/selectorder/ => generated 14585 bytes in 154 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /courses/selectorder/index.html
+[pid: 3405|app: 0|req: 8/49] 192.168.1.105 () {44 vars in 909 bytes} [Wed Apr 18 20:18:42 2018] GET /courses/selectorder/index.html => generated 3691 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 10/50] 192.168.1.105 () {42 vars in 832 bytes} [Wed Apr 18 20:22:25 2018] GET /courses/selectorder/ => generated 14585 bytes in 453 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /courses/selectorder/index.html
+[pid: 3407|app: 0|req: 20/51] 192.168.1.105 () {44 vars in 909 bytes} [Wed Apr 18 20:22:28 2018] GET /courses/selectorder/index.html => generated 3691 bytes in 35 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 14/52] 192.168.1.105 () {42 vars in 832 bytes} [Wed Apr 18 20:23:12 2018] GET /courses/selectorder/ => generated 14585 bytes in 172 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+Not Found: /courses/selectorder/index.html
+[pid: 3407|app: 0|req: 21/53] 192.168.1.105 () {44 vars in 909 bytes} [Wed Apr 18 20:23:14 2018] GET /courses/selectorder/index.html => generated 3691 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 11/54] 192.168.1.105 () {42 vars in 832 bytes} [Wed Apr 18 20:24:17 2018] GET /courses/selectorder/ => generated 14585 bytes in 248 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3407|app: 0|req: 22/55] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 20:24:20 2018] GET /courses/selectorder/ => generated 14585 bytes in 131 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 15/56] 192.168.1.105 () {44 vars in 863 bytes} [Wed Apr 18 20:25:42 2018] GET /courses/selectorder/ => generated 14495 bytes in 70 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 12/57] 192.168.1.105 () {44 vars in 861 bytes} [Wed Apr 18 20:25:44 2018] GET /index/ => generated 3599 bytes in 55 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3406|app: 0|req: 16/58] 192.168.1.105 () {42 vars in 799 bytes} [Wed Apr 18 20:25:45 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 3403|app: 0|req: 13/59] 192.168.1.105 () {44 vars in 875 bytes} [Wed Apr 18 20:25:47 2018] GET /courses/selectorder/ => generated 14495 bytes in 81 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 3406|app: 0|req: 17/60] 192.168.1.105 () {44 vars in 861 bytes} [Wed Apr 18 20:25:49 2018] GET /index/ => generated 3599 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 3403|app: 0|req: 14/61] 192.168.1.105 () {42 vars in 799 bytes} [Wed Apr 18 20:25:49 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 21 09:05:51 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xe86d40
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 23 seconds on interpreter 0xe86d40 pid: 2177 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 2177, cores: 1)
+spawned uWSGI worker 2 (pid: 2181, cores: 1)
+spawned uWSGI worker 3 (pid: 2182, cores: 1)
+spawned uWSGI worker 4 (pid: 2183, cores: 1)
+[pid: 2177|app: 0|req: 1/1] 192.168.1.100 () {44 vars in 835 bytes} [Sat Apr 21 09:09:58 2018] GET /index/ => generated 3599 bytes in 962 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2177|app: 0|req: 2/2] 192.168.1.100 () {42 vars in 799 bytes} [Sat Apr 21 09:09:59 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2182|app: 0|req: 1/3] 192.168.1.100 () {44 vars in 849 bytes} [Sat Apr 21 09:51:58 2018] GET /logout/ => generated 0 bytes in 1596 msecs (HTTP/1.1 302) 5 headers in 214 bytes (1 switches on core 0)
+[pid: 2177|app: 0|req: 3/4] 192.168.1.100 () {44 vars in 803 bytes} [Sat Apr 21 09:52:00 2018] GET /index/ => generated 3305 bytes in 55 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2183|app: 0|req: 1/5] 192.168.1.100 () {42 vars in 755 bytes} [Sat Apr 21 09:52:00 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 267 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2182|app: 0|req: 2/6] 192.168.1.100 () {44 vars in 809 bytes} [Sat Apr 21 09:52:03 2018] GET /register/ => generated 1664 bytes in 68 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2182|app: 0|req: 3/7] 192.168.1.100 () {44 vars in 803 bytes} [Sat Apr 21 09:52:44 2018] GET /login/ => generated 1512 bytes in 24 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2181|app: 0|req: 1/8] 192.168.1.100 () {44 vars in 803 bytes} [Sat Apr 21 09:55:16 2018] GET /login/ => generated 1512 bytes in 206 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2177|app: 0|req: 4/9] 192.168.1.100 () {52 vars in 980 bytes} [Sat Apr 21 09:55:22 2018] POST /login/ => generated 3599 bytes in 232 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2182|app: 0|req: 4/10] 192.168.1.100 () {42 vars in 799 bytes} [Sat Apr 21 09:55:23 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2181|app: 0|req: 2/11] 192.168.1.100 () {44 vars in 877 bytes} [Sat Apr 21 09:55:25 2018] GET /courses/submitorder/0 => generated 2481 bytes in 131 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+Internal Server Error: /courses/submitorder/1
+Traceback (most recent call last):
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./cwweb/app/courses/views.py", line 20, in get
+    order = Orders.objects.get(pk=order_id)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+cwweb.app.courses.models.DoesNotExist: Orders matching query does not exist.
+[pid: 2181|app: 0|req: 3/12] 192.168.1.100 () {42 vars in 834 bytes} [Sat Apr 21 09:55:59 2018] GET /courses/submitorder/1 => generated 94445 bytes in 592 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+Internal Server Error: /courses/submitorder/2
+Traceback (most recent call last):
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./cwweb/app/courses/views.py", line 20, in get
+    order = Orders.objects.get(pk=order_id)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+cwweb.app.courses.models.DoesNotExist: Orders matching query does not exist.
+[pid: 2182|app: 0|req: 5/13] 192.168.1.100 () {42 vars in 834 bytes} [Sat Apr 21 09:56:04 2018] GET /courses/submitorder/2 => generated 94445 bytes in 85 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 2182|app: 0|req: 6/14] 192.168.1.100 () {44 vars in 877 bytes} [Sat Apr 21 09:56:08 2018] GET /courses/submitorder/0 => generated 2481 bytes in 63 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2177|app: 0|req: 5/15] 192.168.1.100 () {44 vars in 875 bytes} [Sat Apr 21 09:56:11 2018] GET /courses/selectorder/ => generated 14495 bytes in 67 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2177|app: 0|req: 6/16] 192.168.1.100 () {44 vars in 893 bytes} [Sat Apr 21 09:56:57 2018] GET /courses/submitorder/11 => generated 2529 bytes in 23 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2183|app: 0|req: 2/17] 192.168.1.100 () {44 vars in 887 bytes} [Sat Apr 21 09:57:24 2018] GET /courses/delorder/15 => generated 3611 bytes in 99 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2177|app: 0|req: 7/18] 192.168.1.100 () {42 vars in 812 bytes} [Sat Apr 21 09:57:24 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2177|app: 0|req: 8/19] 192.168.1.100 () {44 vars in 888 bytes} [Sat Apr 21 09:57:31 2018] GET /courses/selectorder/ => generated 13949 bytes in 34 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2183|app: 0|req: 3/20] 192.168.1.100 () {44 vars in 891 bytes} [Sat Apr 21 09:57:49 2018] GET /courses/submitorder/6 => generated 2537 bytes in 26 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-09 00:00:00) while time zone support is active.
+  RuntimeWarning)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+[pid: 2177|app: 0|req: 9/21] 192.168.1.100 () {52 vars in 1066 bytes} [Sat Apr 21 10:01:23 2018] POST /courses/selectorder/ => generated 9668 bytes in 489 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2177|app: 0|req: 10/22] 192.168.1.100 () {44 vars in 863 bytes} [Sat Apr 21 10:02:54 2018] GET /courses/selectorder/ => generated 13949 bytes in 29 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 28 19:50:45 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 11 March 2018 11:53:54
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xba9be0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./cwweb/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/usr/local/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/usr/local/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 94, in create
+    module = import_module(entry)
+  File "/usr/local/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/__init__.py", line 4, in <module>
+    from xadmin.sites import AdminSite, site
+  File "/home/untitled/cwwebxx/extra_apps/xadmin/sites.py", line 3, in <module>
+    from future.utils import iteritems
+ModuleNotFoundError: No module named 'future'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 2103, cores: 1)
+spawned uWSGI worker 2 (pid: 2114, cores: 1)
+spawned uWSGI worker 3 (pid: 2115, cores: 1)
+spawned uWSGI worker 4 (pid: 2116, cores: 1)
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Apr 28 20:11:30 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1eb9d40
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 9 seconds on interpreter 0x1eb9d40 pid: 2381 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 2381, cores: 1)
+spawned uWSGI worker 2 (pid: 2385, cores: 1)
+spawned uWSGI worker 3 (pid: 2386, cores: 1)
+spawned uWSGI worker 4 (pid: 2387, cores: 1)
+[pid: 2381|app: 0|req: 1/1] 192.168.1.103 () {48 vars in 1013 bytes} [Sat Apr 28 20:12:28 2018] GET /index/ => generated 3599 bytes in 951 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 2387|app: 0|req: 1/2] 192.168.1.103 () {46 vars in 1031 bytes} [Sat Apr 28 20:12:37 2018] GET /courses/selectorder/ => generated 13949 bytes in 628 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2386|app: 0|req: 1/3] 192.168.1.103 () {46 vars in 1031 bytes} [Sat Apr 28 20:12:59 2018] GET /courses/selectorder/ => generated 13949 bytes in 377 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2387|app: 0|req: 2/4] 192.168.1.103 () {46 vars in 1031 bytes} [Sat Apr 28 20:13:27 2018] GET /courses/selectorder/ => generated 13949 bytes in 28 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2381|app: 0|req: 2/5] 192.168.1.103 () {46 vars in 1033 bytes} [Sat Apr 28 20:13:30 2018] GET /courses/submitorder/0 => generated 2481 bytes in 41 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Sun Apr 29 19:59:22 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1ee9d80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 20 seconds on interpreter 0x1ee9d80 pid: 2120 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 2120, cores: 1)
+spawned uWSGI worker 2 (pid: 2131, cores: 1)
+spawned uWSGI worker 3 (pid: 2132, cores: 1)
+spawned uWSGI worker 4 (pid: 2133, cores: 1)
+[pid: 2131|app: 0|req: 1/1] 192.168.1.100 () {44 vars in 835 bytes} [Sun Apr 29 19:59:54 2018] GET /index/ => generated 3599 bytes in 1108 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2133|app: 0|req: 1/2] 192.168.1.100 () {44 vars in 830 bytes} [Sun Apr 29 19:59:56 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 297 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2120|app: 0|req: 1/3] 192.168.1.100 () {44 vars in 875 bytes} [Sun Apr 29 20:00:44 2018] GET /courses/selectorder/ => generated 13949 bytes in 637 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2120|app: 0|req: 2/4] 192.168.1.100 () {44 vars in 863 bytes} [Sun Apr 29 20:01:19 2018] GET /courses/selectorder/ => generated 13949 bytes in 33 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue May  1 19:55:33 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 13 April 2018 15:59:13
+os: Linux-3.10.0-693.17.1.el7.x86_64 #1 SMP Thu Jan 25 20:13:58 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 2
+current working directory: /home/untitled/cwwebxx
+detected binary path: /home/yxin/virtual_envs_works/cwweb/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/untitled/cwwebxx
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7165
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8888 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.4 (default, Feb 19 2018, 16:18:26)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1f6dd80
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 15 seconds on interpreter 0x1f6dd80 pid: 2101 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 2101, cores: 1)
+spawned uWSGI worker 2 (pid: 2112, cores: 1)
+spawned uWSGI worker 3 (pid: 2113, cores: 1)
+spawned uWSGI worker 4 (pid: 2114, cores: 1)
+[pid: 2112|app: 0|req: 1/1] 192.168.1.106 () {44 vars in 835 bytes} [Tue May  1 19:56:03 2018] GET /index/ => generated 3599 bytes in 1265 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2114|app: 0|req: 1/2] 192.168.1.106 () {44 vars in 830 bytes} [Tue May  1 19:56:05 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 295 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2114|app: 0|req: 2/3] 192.168.1.106 () {44 vars in 849 bytes} [Tue May  1 19:56:10 2018] GET /logout/ => generated 0 bytes in 99 msecs (HTTP/1.1 302) 5 headers in 214 bytes (1 switches on core 0)
+[pid: 2114|app: 0|req: 3/4] 192.168.1.106 () {44 vars in 803 bytes} [Tue May  1 19:56:10 2018] GET /index/ => generated 3305 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2112|app: 0|req: 2/5] 192.168.1.106 () {42 vars in 755 bytes} [Tue May  1 19:56:10 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 20 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 1/6] 192.168.1.106 () {44 vars in 809 bytes} [Tue May  1 19:56:13 2018] GET /register/ => generated 1664 bytes in 301 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2101|app: 0|req: 1/7] 192.168.1.106 () {44 vars in 803 bytes} [Tue May  1 19:56:18 2018] GET /login/ => generated 1512 bytes in 199 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 2/8] 192.168.1.106 () {52 vars in 980 bytes} [Tue May  1 19:56:31 2018] POST /login/ => generated 3599 bytes in 227 msecs (HTTP/1.1 200) 6 headers in 409 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2101|app: 0|req: 2/9] 192.168.1.106 () {42 vars in 799 bytes} [Tue May  1 19:56:31 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 10 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 3/10] 192.168.1.106 () {44 vars in 877 bytes} [Tue May  1 19:56:34 2018] GET /courses/submitorder/0 => generated 2481 bytes in 45 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-05-01 19:56:58.797999) while time zone support is active.
+  RuntimeWarning)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_date received a naive datetime (2018-05-01 19:56:58.798016) while time zone support is active.
+  RuntimeWarning)
+[pid: 2101|app: 0|req: 3/11] 192.168.1.106 () {52 vars in 1065 bytes} [Tue May  1 19:56:58 2018] POST /courses/order_edit/ => generated 3617 bytes in 434 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2113|app: 0|req: 4/12] 192.168.1.106 () {42 vars in 812 bytes} [Tue May  1 19:56:59 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 8 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 5/13] 192.168.1.106 () {44 vars in 888 bytes} [Tue May  1 19:57:01 2018] GET /courses/selectorder/ => generated 14484 bytes in 66 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2101|app: 0|req: 4/14] 192.168.1.106 () {44 vars in 893 bytes} [Tue May  1 19:57:09 2018] GET /courses/submitorder/23 => generated 2534 bytes in 29 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2114|app: 0|req: 4/15] 192.168.1.106 () {52 vars in 1066 bytes} [Tue May  1 19:57:13 2018] POST /courses/order_edit/ => generated 3645 bytes in 114 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2113|app: 0|req: 6/16] 192.168.1.106 () {42 vars in 812 bytes} [Tue May  1 19:57:13 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 7/17] 192.168.1.106 () {44 vars in 888 bytes} [Tue May  1 19:57:15 2018] GET /courses/selectorder/ => generated 14488 bytes in 38 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2101|app: 0|req: 5/18] 192.168.1.106 () {44 vars in 887 bytes} [Tue May  1 19:57:23 2018] GET /courses/delorder/23 => generated 3611 bytes in 33 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /assets/js/vendor/jquery-slim.min.js
+[pid: 2112|app: 0|req: 3/19] 192.168.1.106 () {42 vars in 812 bytes} [Tue May  1 19:57:23 2018] GET /assets/js/vendor/jquery-slim.min.js => generated 2826 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 8/20] 192.168.1.106 () {44 vars in 888 bytes} [Tue May  1 19:57:27 2018] GET /courses/selectorder/ => generated 13949 bytes in 30 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-02 00:00:00) while time zone support is active.
+  RuntimeWarning)
+/home/yxin/virtual_envs_works/cwweb/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1451: RuntimeWarning: DateTimeField Orders.add_time received a naive datetime (2018-04-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+[pid: 2114|app: 0|req: 5/21] 192.168.1.106 () {52 vars in 1066 bytes} [Tue May  1 19:57:50 2018] POST /courses/selectorder/ => generated 9668 bytes in 97 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 9/22] 192.168.1.106 () {44 vars in 863 bytes} [Tue May  1 19:57:58 2018] GET /courses/selectorder/ => generated 13949 bytes in 29 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 10/23] 192.168.1.105 () {46 vars in 982 bytes} [Tue May  1 19:58:33 2018] GET /index/ => generated 3599 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 11/24] 192.168.1.105 () {46 vars in 1033 bytes} [Tue May  1 19:58:53 2018] GET /courses/submitorder/0 => generated 2481 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 2113|app: 0|req: 12/25] 192.168.1.105 () {46 vars in 1031 bytes} [Tue May  1 19:59:07 2018] GET /courses/selectorder/ => generated 13949 bytes in 28 msecs (HTTP/1.1 200) 5 headers in 279 bytes (1 switches on core 0)

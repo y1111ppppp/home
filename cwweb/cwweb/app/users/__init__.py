@@ -1,0 +1,1 @@
+default_app_config = "cwweb.app.users.apps.UsersConfig"
