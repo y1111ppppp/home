@@ -14,3 +14,6 @@ def statistical_access(filename):
     for i in range(10):
         print(bbb[i])
 
+if __name__ == '__main__':
+    filename = '/tmp/access.log'
+    statistical_access(filename)
